@@ -11,5 +11,6 @@ func main(){
 	// varia()
 	// ifstatement()
 	// perulangan()
-	array()
+	// array()
+	slice()
 }
