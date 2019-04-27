@@ -5,7 +5,9 @@ import (
 )
 
 func main(){
+	fmt.Println("hello world");
 
+	// param()
 	/*
 	closure()
 	*/
@@ -23,7 +25,6 @@ func main(){
 	*/
 
 	/*
-	fmt.Println("hello world");
 	varia()
 	ifstatement()
 	perulangan()
