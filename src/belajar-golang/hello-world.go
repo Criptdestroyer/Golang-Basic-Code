@@ -9,10 +9,23 @@ import (
 )
 
 func main(){
+	var avg = calculate2(2, 4, 3, 5, 4, 3, 3, 5, 5, 3)
+	var msg = fmt.Sprintf("Rata-rata : %.2f", avg) //mengembalikan nilai dalam bentuk string (fmt.Sprint() dan fmt.Sprintln())
+	fmt.Println(msg)
+	var numbers = []int{2,4,3,5,4,3,3,5,5,3}
+	avg = calculate2(numbers...)
+	msg = fmt.Sprintf("Rata-rata : %.2f", avg)
+	fmt.Println(msg)
+	var hobbies = []string{"sleeping", "eating"}
+	yourHobbies("emir","code", "bucin")
+	yourHobbies("emir",hobbies...)
+
+	/*
 	var diameter float64 = 15
 	var area, circumference = calculate(diameter)
 	fmt.Printf("luas lingkaran\t\t: %.2f \n",area)
 	fmt.Printf("keliling lingkaran\t: %.2f \n", circumference)
+	*/
 
 	/*
 	divideNumber(10,2)
@@ -49,6 +62,21 @@ func main(){
 	slice()
 	maps()
 	*/
+}
+
+func yourHobbies(name string, hobbies ...string){
+	var hobbiesAsString = strings.Join(hobbies, ", ")
+	fmt.Printf("Hello, my name is: %s\n", name)
+    fmt.Printf("My hobbies are: %s\n", hobbiesAsString)
+}
+
+func calculate2(numbers ...int)float64{
+	var total int = 0
+	for _, number := range numbers{
+		total+=number
+	}
+	var avg = float64(total)/float64(len(numbers))
+	return avg
 }
 
 func calculate(d float64) (area float64,circumference float64){
