@@ -6,7 +6,7 @@ import (
 
 func main(){
 	fmt.Println("hello world");
-
+	pointer()
 	// param()
 	/*
 	closure()
