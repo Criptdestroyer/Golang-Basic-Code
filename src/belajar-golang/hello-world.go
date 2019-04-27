@@ -10,5 +10,6 @@ func main(){
 	fmt.Println("hello world");
 	// varia()
 	// ifstatement()
-	perulangan();
+	// perulangan()
+	array()
 }
