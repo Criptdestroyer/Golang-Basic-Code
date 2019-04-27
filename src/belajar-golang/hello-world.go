@@ -12,5 +12,6 @@ func main(){
 	// ifstatement()
 	// perulangan()
 	// array()
-	slice()
+	// slice()
+	maps()
 }
