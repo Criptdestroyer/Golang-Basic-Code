@@ -5,12 +5,20 @@ import (
 	"strings"
 	"math/rand"
 	"time"
+	"math"
 )
 
 func main(){
+	var diameter float64 = 15
+	var area, circumference = calculate(diameter)
+	fmt.Printf("luas lingkaran\t\t: %.2f \n",area)
+	fmt.Printf("keliling lingkaran\t: %.2f \n", circumference)
+
+	/*
 	divideNumber(10,2)
 	divideNumber(4,0)
 	divideNumber(8, -4)
+	*/
 
 	rand.Seed(time.Now().Unix())//membuat random benar2 acak
 	/*
@@ -41,6 +49,12 @@ func main(){
 	slice()
 	maps()
 	*/
+}
+
+func calculate(d float64) (area float64,circumference float64){
+	area = math.Pi * math.Pow(d/2,2)
+	circumference = math.Pi*d
+	return //area, circumference
 }
 
 func divideNumber(m,n int){
