@@ -115,8 +115,8 @@ type person2 struct {name string; age int; hobbies []string}
 
 type student4 struct{
 	person struct{
-		name string `tag1`
-		age int `tag2`
+		name string //`tag1`
+		age int //`tag2`
 	}
 	grade int
 	hobbies []string
